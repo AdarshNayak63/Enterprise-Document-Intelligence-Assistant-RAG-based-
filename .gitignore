@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+*.xlsx
+
+# Virtual Environment
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+*.log.*
+
+# Environment variables
+.env
+.env.*
+
+# Temporary files
+temp_*/
+*.zip
+
+# GCS credentials
+*.json
+
+# Local development
+.DS_Store
+Thumbs.db
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+rag_app.db
+
+# Uploaded files and vector index storage
+storage/uploads/
+storage/faiss/
+backend/storage/uploads/
+backend/storage/faiss/

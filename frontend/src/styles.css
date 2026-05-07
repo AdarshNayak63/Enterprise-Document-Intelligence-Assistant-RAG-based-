@@ -1,0 +1,48 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #17212b;
+}
+body { margin: 0; background: #f4f7fb; }
+.auth-shell { min-height: 100vh; display: grid; place-items: center; }
+.auth-card { background: #fff; padding: 24px; border-radius: 12px; width: 320px; display: grid; gap: 10px; }
+.row { display: flex; gap: 8px; }
+.error { color: #a40000; }
+.app-shell { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+.sidebar { padding: 16px; background: #102a43; color: #fff; display: flex; flex-direction: column; gap: 8px; }
+.new-chat-box { background: #0b1f33; border: 1px solid #23425f; border-radius: 8px; padding: 8px; display: grid; gap: 8px; }
+.session-row { display: flex; gap: 8px; align-items: center; }
+.session { text-align: left; flex: 1; }
+.delete-session { background: #d64545; color: #fff; }
+.logout-btn { margin-top: auto; background: #0b1f33; color: #fff; }
+.chat-main { display: grid; grid-template-rows: auto 1fr auto; }
+header { background: #fff; padding: 14px; border-bottom: 1px solid #d8e1ea; }
+.docs-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+.doc-chip { background: #e8eef5; border-radius: 999px; padding: 4px 10px; font-size: 12px; }
+.messages { padding: 16px; overflow-y: auto; display: grid; gap: 10px; }
+.msg { background: #fff; padding: 10px; border-radius: 8px; max-width: 880px; }
+.msg.user { justify-self: end; background: #dceeff; }
+.msg.assistant { justify-self: start; }
+.loading-msg { display: grid; gap: 8px; color: #2d3c4b; }
+.loading-dots { display: inline-flex; gap: 6px; align-items: center; }
+.loading-dots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5a7a99;
+  animation: pulse 1s infinite ease-in-out;
+}
+.loading-dots span:nth-child(2) { animation-delay: 0.15s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes pulse {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.9); }
+  40% { opacity: 1; transform: scale(1.1); }
+}
+.citations { display: grid; gap: 2px; color: #3a4e62; }
+footer { display: flex; gap: 8px; padding: 12px; background: #fff; border-top: 1px solid #d8e1ea; position: sticky; bottom: 0; z-index: 2; }
+footer input { flex: 1; min-height: 40px; }
+button { cursor: pointer; border: 0; border-radius: 8px; padding: 8px 12px; }
+input { border: 1px solid #c7d3df; border-radius: 8px; padding: 8px; }
+@media (max-width: 900px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .sidebar { overflow-x: auto; }
+}
